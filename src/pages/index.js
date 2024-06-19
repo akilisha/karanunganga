@@ -41,8 +41,8 @@ export default function Home() {
   return (
       <ClerkProvider publishableKey={siteConfig.customFields.APP_PUBLISHABLE_KEY}>
         <Layout
-          title={`Hello from ${siteConfig.title}`}
-          description="Description will go into a meta tag in <head />">
+          title={`${siteConfig.title}`}
+          description="online forum for publishing discussions and finalized artifacts">
           <HomepageHeader />
           <main>
             <HomepageFeatures />
