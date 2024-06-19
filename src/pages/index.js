@@ -18,18 +18,18 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-            {/*<SignedOut>*/}
-            {/*    <SignInButton className="button button--secondary button--lg"></SignInButton>*/}
-            {/*</SignedOut>*/}
-            {/*<SignedIn>*/}
+            <SignedOut>
+                <SignInButton className="button button--secondary button--lg"></SignInButton>
+            </SignedOut>
+            <SignedIn>
               <Link
                 className="button button--secondary button--lg"
                 to="/docs/intro"
                 style={{marginRight: "20px"}}>
                 Karibu - 👷‍♂️
               </Link>
-                {/*<UserButton />*/}
-            {/*</SignedIn>*/}
+                <UserButton />
+            </SignedIn>
         </div>
       </div>
     </header>
@@ -39,7 +39,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-      // <ClerkProvider publishableKey={siteConfig.customFields.APP_PUBLISHABLE_KEY}>
+      <ClerkProvider publishableKey={siteConfig.customFields.APP_PUBLISHABLE_KEY}>
         <Layout
           title={`Hello from ${siteConfig.title}`}
           description="Description will go into a meta tag in <head />">
@@ -48,6 +48,6 @@ export default function Home() {
             <HomepageFeatures />
           </main>
         </Layout>
-      // </ClerkProvider>
+      </ClerkProvider>
   );
 }
