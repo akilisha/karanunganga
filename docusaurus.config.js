@@ -10,7 +10,7 @@ require('dotenv').config()
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Karanu na Ng\'ang\'a',
-  tagline: 'Miscellaneous Documents',
+  tagline: 'Discussions and Miscellaneous Documents',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
@@ -73,12 +73,12 @@ const config = {
           src: 'img/the_lion.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Discussions',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Discussions',
+          // },
           // {to: '/blog', label: 'Discussions', position: 'left'},
           // {
           //   href: 'https://github.com/akilisha/karanunganga',
