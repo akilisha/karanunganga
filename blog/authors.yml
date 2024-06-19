@@ -1,3 +1,33 @@
+nmaina:
+  name: Maina, Ng'ang'a
+  title: Maintainer
+  url: https://github.com/nmaina
+  image_url: https://github.com/nmaina.png
+
+wnyambura:
+  name: Waweru, Nyambura
+  title: Maintainer
+  url: https://github.com/wnyambura
+  image_url: https://github.com/wnyambura.png
+
+jmuigai:
+  name: Muigai, Joseph
+  title: Maintainer
+  url: https://github.com/mjoseph
+  image_url: https://github.com/mjoseph.png
+
+fmuigai:
+  name: Muigai, Francis
+  title: Maintainer
+  url: https://github.com/mfrancis
+  image_url: https://github.com/mfrancis.png
+
+jmacharia:
+  name: Macharia, John
+  title: Maintainer
+  url: https://github.com/mjohn
+  image_url: https://github.com/mjohn.png
+
 endi:
   name: Endilie Yacop Sucipto
   title: Maintainer of Docusaurus

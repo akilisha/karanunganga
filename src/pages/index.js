@@ -6,6 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import {ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -17,11 +18,18 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Under construction - 👷‍♂️
-          </Link>
+            <SignedOut>
+                <SignInButton className="button button--secondary button--lg"></SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/intro"
+                style={{marginRight: "20px"}}>
+                Karibu - 👷‍♂️
+              </Link>
+                <UserButton />
+            </SignedIn>
         </div>
       </div>
     </header>
@@ -31,13 +39,15 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+      <ClerkProvider publishableKey={siteConfig.customFields.APP_PUBLISHABLE_KEY}>
+        <Layout
+          title={`Hello from ${siteConfig.title}`}
+          description="Description will go into a meta tag in <head />">
+          <HomepageHeader />
+          <main>
+            <HomepageFeatures />
+          </main>
+        </Layout>
+      </ClerkProvider>
   );
 }
