@@ -3,6 +3,9 @@
 
 name: Build Docusaurus web content CI
 
+env:
+    APP_PUBLISHABLE_KEY: ${{ secrets.APP_PUBLISHABLE_KEY }}
+    
 on:
   push:
     branches: [ "main" ]
